@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane onMousePressed="#click" prefHeight="135.0" prefWidth="135.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.SquareController">
+   <children>
+      <ImageView fx:id="Img" fitHeight="20.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="-20.0" AnchorPane.topAnchor="0.0">
+         <image>
+            <Image url="@../img/cart.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="possibleCartImg" fitHeight="20.0" fitWidth="20.0" layoutX="10.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+   </children>
+</AnchorPane>

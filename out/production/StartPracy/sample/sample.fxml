@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="774.0" prefWidth="1359.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <TabPane fx:id="tabWithMapAndTask" layoutY="111.0" prefHeight="658.0" prefWidth="1359.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="111.0">
+        <tabs>
+          <Tab fx:id="tabMapID" text="Mapa">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="700.0" prefWidth="1300.0">
+                     <children>
+                        <ScrollPane layoutY="2.0" prefHeight="600.0" prefWidth="1359.0">
+                           <content>
+                              <GridPane fx:id="grid" prefHeight="676.0" prefWidth="1358.0">
+                                <rowConstraints>
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                </rowConstraints>
+                              </GridPane>
+                           </content>
+                        </ScrollPane>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab fx:id="tabTasksID" text="Zadania">
+            <content>
+              <AnchorPane fx:id="anchorid" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <HBox prefHeight="714.0" prefWidth="1359.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <TabPane prefHeight="712.0" prefWidth="1455.0" side="BOTTOM" tabClosingPolicy="UNAVAILABLE">
+                                <tabs>
+                                  <Tab text="Mapa 1">
+                                       <content>
+                                          <Pane prefHeight="700.0" prefWidth="1350.0">
+                                             <children>
+                                                <ScrollPane layoutX="-1.0" layoutY="5.0" prefHeight="587.0" prefWidth="1367.0">
+                                                   <content>
+                                                      <GridPane fx:id="secondgrid" prefHeight="0.0" prefWidth="2.0">
+                                                        <rowConstraints>
+                                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                        </rowConstraints>
+                                                      </GridPane>
+                                                   </content>
+                                                </ScrollPane>
+                                             </children>
+                                          </Pane>
+                                       </content>
+                                  </Tab>
+                                  <Tab text="Mapa 2">
+                                    <content>
+                                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                                    </content>
+                                  </Tab>
+                                </tabs>
+                              </TabPane>
+                           </children>
+                        </HBox>
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+      <TabPane prefHeight="110.0" prefWidth="1359.0" tabClosingPolicy="UNAVAILABLE" tabMinWidth="150.0">
+        <tabs>
+          <Tab fx:id="fileTabID" text="Stwórz mapę ">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <HBox layoutY="-2.0" prefHeight="83.0" prefWidth="1359.0">
+                           <children>
+                              <VBox prefHeight="83.0" prefWidth="163.0">
+                                 <children>
+                                    <Label alignment="CENTER" prefHeight="42.0" prefWidth="242.0" text="Ilość kolumn" />
+                                    <TextField fx:id="howManyCol" />
+                                 </children>
+                              </VBox>
+                              <VBox prefHeight="83.0" prefWidth="162.0">
+                                 <children>
+                                    <Label alignment="CENTER" prefHeight="42.0" prefWidth="242.0" text="Ilość wierszy" />
+                                    <TextField fx:id="howManyRow" />
+                                 </children>
+                              </VBox>
+                              <VBox prefHeight="83.0" prefWidth="170.0">
+                                 <children>
+                                    <Label alignment="CENTER" prefHeight="42.0" prefWidth="242.0" text="Rozmiar pojedynczego pola" />
+                                    <TextField fx:id="realSizeOfSquare" />
+                                 </children>
+                              </VBox>
+                              <Button fx:id="createFirstMap" mnemonicParsing="false" onAction="#createFirstMapAction" prefHeight="83.0" prefWidth="170.0" text="Zatwierdź">
+                                 <HBox.margin>
+                                    <Insets bottom="2.0" left="10.0" right="10.0" top="2.0" />
+                                 </HBox.margin>
+                              </Button>
+                           </children>
+                        </HBox>
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+          <Tab fx:id="editTabID" text="Edycja i zapis">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <HBox layoutX="-2.0" prefHeight="74.0" prefWidth="1359.0">
+                           <children>
+                              <VBox prefHeight="84.0" prefWidth="111.0">
+                                 <children>
+                                    <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="17.0" prefWidth="100.0" text="Wybrana sekcja" />
+                                    <ImageView fx:id="rightBigSquareImage" fitHeight="52.0" fitWidth="116.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../img/green.png" />
+                                       </image>
+                                       <VBox.margin>
+                                          <Insets left="30.0" />
+                                       </VBox.margin>
+                                    </ImageView>
+                                 </children>
+                              </VBox>
+                              <VBox prefHeight="200.0" prefWidth="100.0">
+                                 <children>
+                                    <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="17.0" prefWidth="100.0" text="Wybierz polę" />
+                                    <ComboBox fx:id="choiceBox" prefWidth="150.0" />
+                                 </children>
+                              </VBox>
+                              <Label alignment="CENTER" prefHeight="77.0" prefWidth="167.0" text="Rozmiar zmiany" />
+                              <VBox prefHeight="200.0" prefWidth="100.0">
+                                 <children>
+                                    <Button fx:id="smallSize" mnemonicParsing="false" onAction="#setChangeSizeSmall" prefHeight="25.0" prefWidth="101.0" text="Obszar mały" />
+                                    <Button fx:id="mediumSize" mnemonicParsing="false" onAction="#setChangeSizeMedium" prefHeight="25.0" prefWidth="118.0" text="Obszar średni" />
+                                    <Button fx:id="largeSize" mnemonicParsing="false" onAction="#setChangeSizeLarge" prefHeight="25.0" prefWidth="107.0" text="Obszar duży" />
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets bottom="2.0" top="2.0" />
+                                 </HBox.margin>
+                              </VBox>
+                              <Separator orientation="VERTICAL" prefHeight="79.0" prefWidth="21.0" />
+                              <VBox prefHeight="200.0" prefWidth="100.0">
+                                 <children>
+                                    <Button fx:id="SaveMapButtom" mnemonicParsing="false" onAction="#saveMapToFile" prefHeight="73.0" prefWidth="100.0" text="Zapisz mapę">
+                                       <VBox.margin>
+                                          <Insets bottom="3.0" top="2.0" />
+                                       </VBox.margin></Button>
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets bottom="2.0" left="10.0" top="2.0" />
+                                 </HBox.margin>
+                              </VBox>
+                           </children>
+                        </HBox>
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+            <Tab fx:id="elseTabID" disable="true" text="Otwórz mapę">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Button layoutX="-6.0" mnemonicParsing="false" onAction="#menuNewMapAction" prefHeight="84.0" prefWidth="138.0" text="Wczytaj mapę" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.topAnchor="5.0" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab fx:id="helpTabID" disable="true" text="Zdefiniuj zadanie">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <HBox layoutY="-1.0" prefHeight="83.0" prefWidth="1359.0">
+                           <children>
+                              <Label prefHeight="82.0" prefWidth="113.0" text="1. Wybierz początkową pozycję robota zaznaczając pole i zatwierdź" wrapText="true" />
+                              <Button fx:id="saveRobotStartingPoint1" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#setSaveRobotStartingPoint" prefHeight="83.0" prefWidth="157.0" text="Zatwierdź pozycję robota" wrapText="true">
+                                 <HBox.margin>
+                                    <Insets bottom="4.0" left="10.0" right="10.0" top="2.0" />
+                                 </HBox.margin>
+                              </Button>
+                              <Separator orientation="VERTICAL" prefHeight="83.0" prefWidth="23.0" />
+                              <Label prefHeight="82.0" prefWidth="122.0" text="2. Wybierz miejsce docelowe i zatwierdź" wrapText="true" />
+                              <Button fx:id="saveZadaniaFields1" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#setSaveButtonAction" prefHeight="89.0" prefWidth="158.0" text="Zatwierdź">
+                                 <HBox.margin>
+                                    <Insets bottom="4.0" left="10.0" right="10.0" top="2.0" />
+                                 </HBox.margin>
+                              </Button>
+                           </children>
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                           <padding>
+                              <Insets left="5.0" />
+                           </padding>
+                        </HBox>
+                     </children></AnchorPane>
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>
